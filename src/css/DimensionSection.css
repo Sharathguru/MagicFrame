@@ -1,0 +1,168 @@
+.dimension-section {
+  padding: 0 0 0 15px;
+}
+
+.dimension-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 3px;
+  color: #22223b;
+}
+
+.dimension-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.dimension-frame-area {
+  position: relative;
+  flex: 1;
+  min-width: 600px;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dimension-frame {
+  display: flex;
+  background: #292933;
+  border: 8px solid #b7bdd1;
+  width: 540px;
+  height: 220px;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  position: relative;
+  z-index: 1;
+  margin: 20px 0 24px 0;
+}
+
+.dimension-image-area {
+  background: #f7f7fc;
+  border: 2px solid #d3d3e7;
+  width: 140px;
+  height: 180px;
+  margin: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.04rem;
+  color: #333;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.dimension-label-top {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  color: #36384d;
+  text-align: center;
+  font-weight: 500;
+}
+
+.dimension-label-left {
+  position: absolute;
+  left: -70px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-size: 1rem;
+  color: #36384d;
+  text-align: center;
+  font-weight: 500;
+  width: 180px;
+}
+
+.dimension-label-right {
+  position: absolute;
+  right: -70px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-size: 1rem;
+  color: #36384d;
+  text-align: center;
+  font-weight: 500;
+  width: 180px;
+}
+
+.dimension-label-bottom {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  color: #36384d;
+  text-align: center;
+  font-weight: 500;
+}
+
+.dimension-card {
+  margin: 0 10px;
+  background: #e6e2e2;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(56,56,80,0.05);
+  padding: 26px 20px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dimension-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+}
+
+.dimension-card-label {
+  display: block;
+  font-size: 0.98rem;
+  color: #7a7a8c;
+  margin-bottom: 2px;
+}
+
+.dimension-card-value {
+  font-size: 1.14rem;
+  font-weight: 600;
+  color: #2f2e41;
+  margin-left: 6px;
+}
+
+.dimension-edit-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #8b5cf6;
+  font-size: 1.2rem;
+  padding: 2px 8px;
+}
+
+.dimension-card-input {
+  margin-left: 6px;
+  padding: 4px 10px;
+  border: 1px solid #d3d3e7;
+  border-radius: 6px;
+  font-size: 1rem;
+  min-width: 70px;
+}
+
+.dimension-save-btn {
+  align-self: flex-end;
+  background: #8b5cf6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 8px;
+}
