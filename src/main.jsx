@@ -2,9 +2,12 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
+import { FrameProvider } from './context/FrameContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <FrameProvider>
+      <App />
+    </FrameProvider>
   </StrictMode>,
 )

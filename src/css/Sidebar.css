@@ -1,38 +1,59 @@
 .sidebar {
-  width: 160px;
-  background: #f6f7fb;
-  padding-top: 32px;
+  width: 110px;
+  /* background: #e5e7ef; */
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  min-height: 100vh;
-  border-right: 1px solid #e5e7eb;
+  align-items: center;
+  padding-top: 32px;
+  box-sizing: border-box;
 }
 
 .sidebar-btn {
-  background: none;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 24px;
+  /* background: #fff; */
   border: none;
-  outline: none;
+  border-radius: 16px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 12px;
-  font-size: 1rem;
-  color: #444;
-  padding: 12px 24px;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(56,56,80,0.07);
   cursor: pointer;
-  border-radius: 8px 0 0 8px;
-  transition: background 0.2s, color 0.2s;
-  font-weight: 500;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+  font-size: 1rem;
+  color: #22223b;
+  outline: none;
+  position: relative;
 }
 
 .sidebar-btn.active,
+.sidebar-btn:focus,
 .sidebar-btn:hover {
-  background: #ede9fe;
-  color: #8b5cf6;
+  background: #a78bfa;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(139,92,246,0.11);
+}
+
+.sidebar-btn.active .sidebar-icon,
+.sidebar-btn:focus .sidebar-icon,
+.sidebar-btn:hover .sidebar-icon {
+  filter: brightness(0) invert(1);
 }
 
 .sidebar-icon {
-  width: 24px;
-  height: 24px;
-  filter: drop-shadow(0 1px 0 #fff);
+  width: 28px;
+  height: 28px;
+  margin-bottom: 7px;
+  transition: filter 0.2s;
+}
+
+.sidebar-btn span {
+  font-size: 0.93rem;
+  font-weight: 500;
+  color: inherit;
+  letter-spacing: 0.2px;
+  margin-top: 1px;
 }

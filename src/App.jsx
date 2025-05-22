@@ -1,50 +1,30 @@
-// import React from "react";
-// import FrameDesigner from "./components/FrameDesigner";
-
-// const App = () => {
-//   return (
-//     <div>
-//       <FrameDesigner />
-//     </div>
-//   );
-// };
-
-// export default App;
-
-
-import React, { useState } from "react";
+import React from "react";
+import { FrameProvider } from "./context/FrameContext";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./Pages/Navbar";
-import Sidebar from "./components/Sidebar";
 import DimensionSection from "./Pages/DimensionSection";
-// import FrameSection, FinishSection, GodsSection, AccessoriesSection from their respective files
+import FrameTypeSection from "./Pages/FrameTypeSection";
+// import FinishSection, GodsSection, AccessoriesSection as needed
 
 const App = () => {
-  const [selected, setSelected] = useState(0);
-
-  // Render section based on selected sidebar menu
-  function renderSection() {
-    switch (selected) {
-      case 0:
-        return <DimensionSection />;
-      // case 1: return <FrameSection />;
-      // case 2: return <FinishSection />;
-      // case 3: return <GodsSection />;
-      // case 4: return <AccessoriesSection />;
-      default:
-        return null;
-    }
-  }
-
   return (
-    <div>
-      <Navbar />
-      <div style={{ display: "flex" }}>
-        <Sidebar selected={selected} onSelect={setSelected} />
-        <div style={{ flex: 1, background: "#f6f7fb", minHeight: "100vh" }}>
-          {renderSection()}
+    <FrameProvider>
+      <Router>
+        <Navbar />
+        <div style={{ display: "flex" }}>
+          <div style={{ flex: 1, background: "#f6f7fb", minHeight: "100vh" }}>
+            <Routes>
+              <Route path="/" element={<Navigate to="/dimensions" />} />
+              <Route path="/dimensions" element={<DimensionSection />} />
+              <Route path="/frame" element={<FrameTypeSection />} />
+              {/* <Route path="/finish" element={<FinishSection />} /> */}
+              {/* <Route path="/gods" element={<GodsSection />} /> */}
+              {/* <Route path="/accessories" element={<AccessoriesSection />} /> */}
+            </Routes>
+          </div>
         </div>
-      </div>
-    </div>
+      </Router>
+    </FrameProvider>
   );
 };
 
