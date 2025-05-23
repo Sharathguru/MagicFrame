@@ -12,7 +12,7 @@ const Navbar = () => {
         <a href="#" className="active">Create a Frame</a>
         <a href="#">Order History</a>
         <img
-          src="https://randomuser.me/api/portraits/men/32.jpg"
+          src="https://png.pngtree.com/png-clipart/20200224/original/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_5247852.jpg"
           alt="User"
           className="navbar-avatar"
         />

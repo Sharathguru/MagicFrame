@@ -79,8 +79,13 @@
   background: #e5e7ef;
   border-radius: 18px;
   margin: 0 32px;
+  flex-wrap: nowrap;
   overflow-x: auto;
   box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .frame-type-list::-webkit-scrollbar {
@@ -157,3 +162,13 @@
   box-shadow: 0 2px 8px rgba(139,92,246,0.16);
   z-index: 2;
 }
+
+import { useEffect, useRef } from "react";
+
+const listRef = useRef();
+
+useEffect(() => {
+  if (listRef.current) {
+    listRef.current.scrollLeft = 0;
+  }
+}, [page]);

@@ -1,0 +1,183 @@
+.dimension-section {
+  padding: 32px 24px;
+  background: #f6f7fb;
+  min-height: 100vh;
+}
+
+.dimension-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #22223b;
+  margin-bottom: 24px;
+}
+
+.dimension-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.dimension-frame-area {
+  position: relative;
+  flex: 1;
+}
+
+.dimension-frame {
+  border-width: 16px;
+  border-style: solid;
+  border-image: url("https://static.vecteezy.com/system/resources/previews/024/681/931/non_2x/icon-design-border-frame-free-png.png") 30 stretch;
+  background: #23232f;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  height: 220px;
+  width: 540px;
+  margin-bottom: 16px;
+}
+
+.dimension-label-top,
+.dimension-label-bottom,
+.dimension-label-left,
+.dimension-label-right {
+  color: #7a7a8c;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.dimension-label-top {
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dimension-label-bottom {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.dimension-label-left {
+  position: absolute;
+  left: -140px;
+  top: 50px;
+  width: 120px;
+  text-align: right;
+}
+
+.dimension-label-right {
+  position: absolute;
+  right: -140px;
+  top: 50px;
+  width: 120px;
+  text-align: left;
+}
+
+.dimension-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(56,56,80,0.07);
+  padding: 24px 18px;
+  min-width: 220px;
+  max-width: 260px;
+  margin-left: 24px;
+}
+
+.dimension-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dimension-card-label {
+  color: #7a7a8c;
+  font-size: 1rem;
+  margin-right: 8px;
+}
+
+.dimension-card-value {
+  color: #22223b;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.dimension-edit-btn {
+  margin-top: 12px;
+  background: #f6f7fb;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.gods-options-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+  margin: 8px 0 0 32px;
+  padding: 24px 0 32px 0;
+  background: #e5e7ef;
+  border-radius: 18px;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+.god-option {
+  border: 1.5px solid #8b5cf6;
+  border-radius: 12px;
+  padding: 18px 10px;
+  background: #fff;
+  cursor: grab;
+  width: 120px;
+  min-height: 140px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(56,56,80,0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s;
+}
+
+.god-option img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.god-option-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.pagination-controls button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #8b5cf6;
+  color: #fff;
+  font-weight: 500;
+  margin: 0 8px;
+  font-size: 1rem;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.pagination-controls button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

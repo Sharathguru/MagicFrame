@@ -10,6 +10,15 @@ const menu = [
   { label: "Accessories", icon: "https://img.icons8.com/ios-filled/50/8b5cf6/box.png", path: "/accessories" },
 ];
 
+const FRAME_TYPES = [
+  { id: 1, name: "Inlay", width: 1, image: "..." },
+  { id: 2, name: "V Shape", width: 2, image: "..." },
+  { id: 3, name: "Mani", width: 2, image: "..." },
+  { id: 4, name: "Aastha Lakshmi", width: 3, image: "..." },
+  { id: 5, name: "Aastha Lakshmi", width: 3, image: "..." },
+  // etc.
+];
+
 const Sidebar = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -26,6 +35,7 @@ const Sidebar = () => {
           <span>{item.label}</span>
         </button>
       ))}
+     
     </aside>
   );
 };

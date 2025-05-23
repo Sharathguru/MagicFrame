@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useFrame } from "../context/FrameContext";
 import DimensionSection from "./DimensionSection";
 import "../css/FrameTypeSection.css";
@@ -25,6 +25,7 @@ const PAGE_SIZE = 6;
 const FrameTypeSection = () => {
   const { typeIdx, setTypeIdx } = useFrame();
   const [page, setPage] = useState(0);
+  const listRef = useRef();
 
   const totalPages = Math.ceil(FRAME_TYPES.length / PAGE_SIZE);
 
@@ -32,6 +33,12 @@ const FrameTypeSection = () => {
   const startIdx = page * PAGE_SIZE;
   const endIdx = startIdx + PAGE_SIZE;
   const visibleFrames = FRAME_TYPES.slice(startIdx, endIdx);
+
+  useEffect(() => {
+    if (listRef.current) {
+      listRef.current.scrollLeft = 0;
+    }
+  }, [page]);
 
   return (
     <div className="frame-type-section">
@@ -61,7 +68,10 @@ const FrameTypeSection = () => {
             </button>
           </div>
         </div>
-        <div className="frame-type-list">
+        <div className="frame-type-pagination-info">
+          Page {page + 1} of {totalPages}
+        </div>
+        <div className="frame-type-list" ref={listRef}>
           {visibleFrames.map((type, idx) => {
             const globalIdx = startIdx + idx;
             return (
